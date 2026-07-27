@@ -1,0 +1,39 @@
+.sidebar {
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ebeced;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 70px);
+}
+
+.category-list{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.category-item input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4a67d6;
+  cursor: pointer;
+}
+
+.salary-select {
+  width: 100%;
+  padding: 4px 12px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background-color: white;
+}

@@ -1,0 +1,18 @@
+.job-card {
+    width: calc(100vw - 300px);
+    height: 120px;
+    border: 1px solid #878787;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.job-card h3 {
+    font-size: 18px;
+    margin: 8px 0 0 0;
+}
+
+.job-card p {
+    font-size: 14px;
+    margin: 4px 0 0 0;
+}
