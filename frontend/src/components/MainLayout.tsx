@@ -5,6 +5,7 @@ import type { Job } from '../types/job'
 import './MainLayout.css'
 
 export default function MainLayout() {
+  const API_URL = import.meta.env.VITE_API_URL
   const [jobs, setJobs] = useState<Job[]>([])
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [minimumSalary, setMinimumSalary] = useState(0)
@@ -18,7 +19,7 @@ export default function MainLayout() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://localhost:3000/jobs')
+        const response = await fetch(`${API_URL}/jobs`)
 
         if (!response.ok) {
           console.error('求人一覧の取得に失敗しました')

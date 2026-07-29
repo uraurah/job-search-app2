@@ -5,6 +5,8 @@ import type { JobFormData } from '../types/job'
 import './JobPostForm.css'
 
 export default function JobPostForm() {
+    const API_URL = import.meta.env.VITE_API_URL
+
     const [formData, setFormData] = useState<JobFormData>({
         category:'', 
         salary:'', 
@@ -36,7 +38,7 @@ export default function JobPostForm() {
         console.log('送信開始:', submitData)
 
         try{
-            const response = await fetch('http://localhost:3000/jobs', {
+            const response = await fetch(`${API_URL}/jobs`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
